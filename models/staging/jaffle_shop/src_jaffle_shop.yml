@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-    name: jaffle_shop
-    database: raw
-    schema: jaffle_shop
-    tables:
-      name: customers
-      name: orders
+  - name: jaffle_shop  # This defines the source name
+    database: raw      # This is the database in Snowflake
+    schema: jaffle_shop  # This is the schema in Snowflake
+    tables:             # This is a list of tables under the source
+      - name: customers  # Each table needs its own dictionary entry
+      - name: orders
