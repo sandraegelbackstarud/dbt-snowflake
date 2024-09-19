@@ -6,4 +6,14 @@ sources:
     schema: jaffle_shop  # This is the schema in Snowflake
     tables:             # This is a list of tables under the source
       - name: customers  # Each table needs its own dictionary entry
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
       - name: orders
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
